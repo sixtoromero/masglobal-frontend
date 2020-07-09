@@ -1,0 +1,12 @@
+<ag-grid-angular
+    style="width: 100%; height: 500px;"
+    class="ag-theme-alpine"
+    [rowData]="employees">
+    <ag-grid-column headerName="Id" field="id" [width]="80" [sortable]="true" [filter]="true"></ag-grid-column>
+    <ag-grid-column headerName="Name" field="name" [width]="650" [sortable]="true" [filter]="true"></ag-grid-column>
+    <ag-grid-column headerName="Contract TypeName" field="contractTypeName" [width]="300" [sortable]="true" [filter]="true"></ag-grid-column>
+    <ag-grid-column headerName="Hourly Salary" field="hourlySalary" [width]="350" [sortable]="true" [filter]="true"></ag-grid-column>
+    <ag-grid-column headerName="Monthly Salary" field="monthlySalary" [width]="250" [sortable]="true" [filter]="true"></ag-grid-column>
+    <ag-grid-column headerName="Annual Salary" field="annualSalary" [width]="250" [sortable]="true" [filter]="true"></ag-grid-column>
+</ag-grid-angular>
+

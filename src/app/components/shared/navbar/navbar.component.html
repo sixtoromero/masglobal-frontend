@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">MASGLOBAL</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse my-2 my-lg-0" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#" [routerLink]="['home']">Home <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+        <select #typeContract class="custom-select" style="margin-right: 5px; margin-bottom: 0px;">
+          <option value="All" selected>selected</option>
+          <option value="HourlySalaryEmployee">Hourly Salary</option>
+          <option value="MonthlySalaryEmployee">Monthly Salary</option>
+        </select>
+        <input #id class="form-control mr-sm-2" type="number" 
+              (keydown.enter)="getEmployees(id.value, typeContract.value)"
+              placeholder="Id Employees" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" (click)="getEmployees(id.value, typeContract.value)" type="submit">Get Employees</button>
+      </div>
+      
+    </div>
+  </nav>

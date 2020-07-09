@@ -1,0 +1,12 @@
+<h1>Employee information <small>MASGLOBAL</small> </h1> 
+<a [routerLink]="['/gallery']" class="btn btn-outline-primary"><< back</a>
+<hr>
+<div class="row animated fadeIn fast" *ngIf="employees.length === 0 || employees === null">
+    <div class="col-md-12">
+        <div class="alert alert-info" role="alert">
+            No results were obtained
+        </div>
+    </div>
+</div>
+<app-datagrid [employees]="employees"></app-datagrid>
+<ngx-ui-loader></ngx-ui-loader>
